@@ -25,8 +25,6 @@ let displayDate = `It is ${today} ${currentHour}:${currentMinute}`;
 let todayForecast = document.querySelector("#today-forecast");
 todayForecast.innerHTML = displayDate;
 
-//Current button:
-
 navigator.geolocation.getCurrentPosition(handlePosition);
 
 function handlePosition(position) {
@@ -58,8 +56,6 @@ function locationInformation(response) {
 function clickAlert() {
   alert("You have changed your current location");
 }
-
-//Search bar:
 
 let locationInput = document.querySelector("#searching-bar");
 locationInput.addEventListener("submit", locationSearch);

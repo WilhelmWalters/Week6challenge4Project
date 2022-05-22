@@ -32,7 +32,7 @@ function handlePosition(position) {
   let longitude = position.coords.longitude;
   let unit = "metric";
   let apiKey = "6ee249f42e799c5df8afd9d8221995b0";
-  //let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${unit}`;
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${unit}`;
   axios.get(url).then(locationInformation);
 }
 
@@ -74,7 +74,7 @@ function locationSearch(event) {
       userSearch = userSearch.toLowerCase();
       let unit = "metric";
       let userSearchApiKey = "6ee249f42e799c5df8afd9d8221995b0";
-      //let searchUrl = `https://api.openweathermap.org/data/2.5/weather?q=${userSearch}&appid=${userSearchApiKey}&units=${unit}`;
+      let searchUrl = `https://api.openweathermap.org/data/2.5/weather?q=${userSearch}&appid=${userSearchApiKey}&units=${unit}`;
       console.log(searchUrl);
       axios.get(searchUrl).then(changeTitleName);
     } else {

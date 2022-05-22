@@ -1,5 +1,3 @@
-import "./style.css";
-
 let now = new Date();
 let days = [
   "Sunday",

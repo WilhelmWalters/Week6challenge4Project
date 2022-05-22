@@ -48,7 +48,7 @@ function locationInformation(response) {
     "#current-weather-subheading"
   );
   let humidity = response.data.main.humidity;
-  currentWeatherSubheading.innerHTML = `C, some ${localWeatherDescription} and ${humidity}% humidity`;
+  currentWeatherSubheading.innerHTML = `°C, some ${localWeatherDescription} and ${humidity}% humidity`;
 }
 
 function clickAlert() {
@@ -84,5 +84,5 @@ function changeTitleName(response) {
   let temperatureForChangingTitle = response.data.main.temp;
   temperatureForChangingTitle = Math.round(response.data.main.temp);
   let changingTitle = document.querySelector("#title-temp");
-  changingTitle.innerHTML = `It's ${temperatureForChangingTitle}`;
+  changingTitle.innerHTML = `It's ${temperatureForChangingTitle}°C`;
 }
